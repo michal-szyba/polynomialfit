@@ -14,6 +14,6 @@ y_values = polynomial_function(x_values, *true_params) + np.random.normal(0.0, 5
 parameters, parameters_covariance = curve_fit(polynomial_function, x_values, y_values)
 
 plt.scatter(x_values, y_values, label="Points")
-plt.plot(x_values, polynomial_function(x_values, *parameters))
+plt.plot(x_values, polynomial_function(x_values, *parameters) ,label="Fit")
 plt.legend()
 plt.show()
